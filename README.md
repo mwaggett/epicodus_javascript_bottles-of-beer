@@ -1,16 +1,18 @@
-# Application Name
+# 99 Bottles of Beer on the Wall..
 
-##### _{Brief description of application}, {Date of current version}_
+##### _JavaScript BDD Code Review for Epicodus, 18 September 2015_
 
 #### By **Molly Waggett**
 
 ## Description
 
-{This is a detailed description of your application. Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. Do you want other developers to use this code in their apps? Talk about things like that here in simple terms.}
+This page allows the user to enter a number and then displays the lyrics to 99 Bottles of Beer on the Wall, starting with the number the user entered.
 
 ## Setup
 
 * Clone this repository.
+* Open the index.html file in your browser.
+* Go!
 
 ## Technologies Used
 
