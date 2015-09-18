@@ -5,7 +5,7 @@ var bottlesOfBeer = function(number) {
 var oneRound = function(number) {
   var nextNumber = number - 1;
   return number + " bottles of beer on the wall, " + number + " bottles of beer. " +
-      "Take one down and pass it around, " + nextNumber + " bottles of beer on the wall. ";
+      "Take one down and pass it around, " + nextNumber + " bottles of beer on the wall.\n";
 }
 
 var allButLastRound = function(number) {
@@ -23,14 +23,11 @@ var lastRound = function(startNumber) {
 $(document).ready(function() {
   $("form#bottles").submit(function(event) {
     var number = parseInt($("input#number").val());
-    // for (var bottle = number; bottle > 0; bottle--) {
-    //   $("#song").append("<li>"+oneRound(bottle)+"</li>");
-    // }
-    // $("#song").append("<li>"+lastRound(number)+"</li>");
-
     var song = bottlesOfBeer(number);
-    $("#song").text(song);
+    song = song.replace(/\n/g,'<br>');
+
     $("#input").text(number);
+    $(".result").append("<p><i>"+song+"</i></p>");
 
     $(".result").show();
     $(".input").hide();
