@@ -16,6 +16,16 @@ var lastRound = function() {
 }
 
 
-// $(document).ready(function() {
-//
-// });
+$(document).ready(function() {
+  $("form#bottles").submit(function(event) {
+    var number = parseInt($("input#number").val());
+    var song = bottlesOfBeer(number);
+
+    $("#input").text(number);
+    $("#song").text(song);
+
+    $(".result").show();
+    $(".input").hide();
+    event.preventDefault();
+  });
+});
